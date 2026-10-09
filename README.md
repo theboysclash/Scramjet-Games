@@ -13,6 +13,10 @@ Open `http://localhost:8080`. Each button shows a logo and the game name. Clicki
 
 ## GitHub Codespaces
 
-Create a codespace from this repo. The dev container installs dependencies and starts the server on port 8080. Open the forwarded site from the Ports tab. That address is `https://<codespace>-8080.app.github.dev`, which is what Scramjet needs for the service worker and the Wisp socket.
+Create a codespace from this repo and wait until the setup command finishes installing dependencies. Port 8080 stays closed until you start the site. In the codespace terminal run:
 
-Use that forwarded link in the browser. A `localhost` address typed on your own machine only works when VS Code is forwarding the port onto your computer.
+```bash
+pnpm start
+```
+
+Click the `http://localhost:8080` link in that terminal. Codespaces forwards it to `https://<codespace>-8080.app.github.dev`. Use that forwarded link in the browser. If 8080 is already taken, the server prints the next port and that is the link to open.
