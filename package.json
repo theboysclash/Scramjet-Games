@@ -1,0 +1,23 @@
+{
+  "name": "afterburner",
+  "version": "1.0.0",
+  "description": "Unblocked games lobby that opens browser games through Scramjet.",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/static": "^9.0.0",
+    "@mercuryworkshop/bare-mux": "^2.1.9",
+    "@mercuryworkshop/libcurl-transport": "^1.5.2",
+    "@mercuryworkshop/scramjet": "https://github.com/MercuryWorkshop/scramjet/releases/download/v1.1.0/mercuryworkshop-scramjet-1.1.0.tgz",
+    "@mercuryworkshop/wisp-js": "^0.4.1",
+    "fastify": "^5.7.4",
+    "ws": "^8.18.3"
+  },
+  "packageManager": "pnpm@10.18.3"
+}
