@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scramjet</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="play">
+    <header class="play-bar">
+      <a href="/">Games</a>
+      <form id="sj-form">
+        <label class="sr" for="sj-address">Scramjet</label>
+        <input id="sj-address" type="text" placeholder="Game link" autocomplete="off" />
+        <button type="submit">Open</button>
+      </form>
+    </header>
+    <div id="frame-host"></div>
+    <p id="sj-status"></p>
+    <script src="/baremux/index.js"></script>
+    <script src="/scram/scramjet.all.js"></script>
+    <script src="/register-sw.js"></script>
+    <script src="/play.js"></script>
+  </body>
+</html>
