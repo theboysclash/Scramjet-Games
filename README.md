@@ -13,10 +13,6 @@ Open `http://localhost:8080`. Each button shows a logo and the game name. Clicki
 
 ## GitHub Codespaces
 
-Create a codespace from this repo and wait until the setup command finishes installing dependencies. Port 8080 stays closed until you start the site. In the codespace terminal run:
+Create a codespace and wait until setup finishes. The site listens on port 8080 over HTTP. Open the forwarded `https://<codespace>-8080.app.github.dev` link from the terminal.
 
-```bash
-pnpm start
-```
-
-Click the `http://localhost:8080` link in that terminal. Codespaces forwards it to `https://<codespace>-8080.app.github.dev`. Use that forwarded link in the browser. If 8080 is already taken, the server prints the next port and that is the link to open.
+In the Ports tab, port 8080 must use the HTTP protocol. HTTPS on that port makes Codespaces return HTTP 502, because this server does not speak TLS. The browser link is still `https://`.
