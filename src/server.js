@@ -25,8 +25,10 @@ const fastify = Fastify({
         handler(req, res);
       })
       .on("upgrade", (req, socket, head) => {
-        if (req.url?.endsWith("/wisp/")) wisp.routeRequest(req, socket, head);
-        else socket.end();
+        const path = (req.url || "").split("?")[0];
+        if (path === "/wisp" || path.endsWith("/wisp/")) {
+          wisp.routeRequest(req, socket, head);
+        } else socket.end();
       });
   },
 });
@@ -65,4 +67,12 @@ fastify.listen({ port, host: "0.0.0.0" }).then(() => {
   const bound = typeof address === "object" && address ? address.port : port;
   console.log(`Afterburner listening on http://localhost:${bound}`);
   console.log(`and http://${hostname()}:${bound}`);
+
+  const codespace = process.env.CODESPACE_NAME;
+  const domain = process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN;
+  if (codespace && domain) {
+    console.log(
+      `Codespace URL: https://${codespace}-${bound}.${domain}`,
+    );
+  }
 });
