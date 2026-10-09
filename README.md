@@ -1,6 +1,6 @@
 # Afterburner
 
-A games lobby that opens browser games through [Scramjet](https://github.com/MercuryWorkshop/scramjet). The catalog stays on this site. Choosing a title loads that game’s public page inside a Scramjet frame, using the local Wisp server and libcurl transport from the [Scramjet demo app](https://github.com/MercuryWorkshop/Scramjet-App).
+A games page that opens browser games through [Scramjet](https://github.com/MercuryWorkshop/scramjet).
 
 ## Run
 
@@ -9,9 +9,7 @@ pnpm install
 pnpm start
 ```
 
-Open `http://localhost:8080`. Search filters the cabinet. Pasting a full link and pressing Open loads that address through Scramjet too.
-
-Service workers need HTTPS once this is off localhost.
+Open `http://localhost:8080`. Each button shows a logo and the game name. Clicking it opens Scramjet with that game’s address. The box at the top does the same for any link you paste.
 
 ## GitHub Codespaces
 

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="256" height="256" rx="48" fill="#16120f"/>
+  <rect x="16" y="16" width="224" height="224" rx="40" fill="none" stroke="#c47a4a" stroke-width="10"/>
+  <text x="128" y="154" text-anchor="middle" font-family="Georgia, serif" font-size="64" font-weight="700" fill="#c47a4a">RUST</text>
+</svg>

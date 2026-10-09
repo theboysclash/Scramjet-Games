@@ -3,69 +3,120 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Afterburner</title>
-    <meta
-      name="description"
-      content="Browser games opened through Scramjet."
-    />
+    <title>Games</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div id="lobby">
-      <header class="top">
-        <a class="mark" href="/">Afterburner</a>
-        <p class="via">Games open through Scramjet</p>
-      </header>
-
-      <section class="hero">
-        <div>
-          <p class="eyebrow">Unblocked lobby</p>
-          <h1>Play the cabinet.<br />Skip the block page.</h1>
-        </div>
-        <p class="lede">
-          Pick a game and it loads inside this site. Scramjet fetches the
-          page, so the address you see stays here.
-        </p>
-      </section>
-
-      <div class="toolbar">
-        <div class="filters" id="filters" role="tablist" aria-label="Categories"></div>
-        <form id="finder" class="finder">
-          <label class="sr" for="query">Search games or paste a link</label>
-          <input
-            id="query"
-            name="query"
-            type="search"
-            placeholder="Search titles, or paste any game link"
-            autocomplete="off"
-          />
-          <button type="submit">Open</button>
-        </form>
+    <main>
+      <h1>Games</h1>
+      <form action="/play.html" method="get">
+        <label for="url">Scramjet</label>
+        <input id="url" name="url" type="text" placeholder="Game link" autocomplete="off" />
+        <button type="submit">Open</button>
+      </form>
+      <div class="games">
+        <a class="game" href="/play.html?url=https%3A%2F%2Fvel.gg%2Fbo1z">
+          <img src="/logos/bo1-zombies.svg" alt="" width="96" height="96" />
+          <span>BO1 Zombies</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fmoon-zombies.pages.dev">
+          <img src="/logos/moon.svg" alt="" width="96" height="96" />
+          <span>Moon</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fkino-der-toten.pages.dev">
+          <img src="/logos/kino.svg" alt="" width="96" height="96" />
+          <span>Kino der Toten</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fcheese-cube.pages.dev">
+          <img src="/logos/cheese-cube.svg" alt="" width="96" height="96" />
+          <span>BO3 Cheese Cube</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fvibeslops.luckeysystems.com">
+          <img src="/logos/bo2.svg" alt="" width="96" height="96" />
+          <span>Black Ops 2</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fovz-game-production.up.railway.app">
+          <img src="/logos/mw2.svg" alt="" width="96" height="96" />
+          <span>Modern Warfare 2</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fskate.aaddpp.lol">
+          <img src="/logos/skate-3.svg" alt="" width="96" height="96" />
+          <span>Skate 3</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fglobal-terror.net">
+          <img src="/logos/skate-rust.svg" alt="" width="96" height="96" />
+          <span>Skate Rust</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fsurfd.net">
+          <img src="/logos/cs-surf.svg" alt="" width="96" height="96" />
+          <span>CS Surf</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fmitchellhynes.com%2Fhalo">
+          <img src="/logos/halo-ce.svg" alt="" width="96" height="96" />
+          <span>Halo CE</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fhcemobile.com">
+          <img src="/logos/halo-mobile.svg" alt="" width="96" height="96" />
+          <span>Halo CE Mobile</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fpes6.optijuegos.net">
+          <img src="/logos/pes-6.svg" alt="" width="96" height="96" />
+          <span>PES 6</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20261006055917%2Fhttps%3A%2F%2Fplaygta5.com%2F">
+          <img src="/logos/gta-5.svg" alt="" width="96" height="96" />
+          <span>GTA 5</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fjoncodeofficial.github.io%2Fgta-vice-city-wasm%2F">
+          <img src="/logos/vice-city.svg" alt="" width="96" height="96" />
+          <span>GTA Vice City</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fshar-wasm.cjoseph.workers.dev%2F%3Fskipmovie">
+          <img src="/logos/hit-and-run.svg" alt="" width="96" height="96" />
+          <span>The Simpsons: Hit & Run</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fq1.pieter.com">
+          <img src="/logos/quake-1.svg" alt="" width="96" height="96" />
+          <span>Quake 1</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fq2.pieter.com">
+          <img src="/logos/quake-2.svg" alt="" width="96" height="96" />
+          <span>Quake 2</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fq3.pieter.com">
+          <img src="/logos/quake-3.svg" alt="" width="96" height="96" />
+          <span>Quake 3</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Frtcw.pieter.com">
+          <img src="/logos/rtcw.svg" alt="" width="96" height="96" />
+          <span>Return to Castle Wolfenstein</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fut.pieter.com">
+          <img src="/logos/ut.svg" alt="" width="96" height="96" />
+          <span>Unreal Tournament</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fpixelsuft.github.io%2Fhl%2F">
+          <img src="/logos/half-life.svg" alt="" width="96" height="96" />
+          <span>Half-Life</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fx8bitrain.github.io%2FwebXash%2F">
+          <img src="/logos/webxash.svg" alt="" width="96" height="96" />
+          <span>Half-Life / CS 1.6</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fjohnimril.github.io%2Fdiablo_web%2F">
+          <img src="/logos/diablo.svg" alt="" width="96" height="96" />
+          <span>Diablo</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fwebwars.link">
+          <img src="/logos/hedgewars.svg" alt="" width="96" height="96" />
+          <span>Hedgewars</span>
+        </a>
+        <a class="game" href="/play.html?url=https%3A%2F%2Fwasmarcade.com%2FFan">
+          <img src="/logos/wasm-arcade.svg" alt="" width="96" height="96" />
+          <span>More GTA / Minecraft</span>
+        </a>
       </div>
-
-      <p id="empty" class="empty" hidden>No games match that search.</p>
-      <section id="grid" class="grid" aria-live="polite"></section>
-    </div>
-
-    <section id="player" class="player" hidden>
-      <header class="player-bar">
-        <button id="back" type="button">Lobby</button>
-        <div class="player-meta">
-          <strong id="player-title">Game</strong>
-          <span id="player-host"></span>
-        </div>
-        <button id="reload" type="button">Reload</button>
-      </header>
-      <div id="frame-host" class="frame-host"></div>
-      <p id="player-status" class="player-status">Opening through Scramjet…</p>
-    </section>
-
-    <p id="toast" class="toast" role="alert" hidden></p>
-
-    <script src="/baremux/index.js" defer></script>
-    <script src="/scram/scramjet.all.js" defer></script>
-    <script src="/register-sw.js" defer></script>
-    <script src="/app.js" type="module" defer></script>
+    </main>
   </body>
 </html>
