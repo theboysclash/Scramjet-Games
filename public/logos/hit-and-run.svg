@@ -1,5 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <rect width="256" height="256" rx="48" fill="#16120f"/>
-  <rect x="16" y="16" width="224" height="224" rx="40" fill="none" stroke="#f7dc6f" stroke-width="10"/>
-  <text x="128" y="154" text-anchor="middle" font-family="Georgia, serif" font-size="64" font-weight="700" fill="#f7dc6f">H&amp;R</text>
+  <defs>
+    <linearGradient id="bg" x1="24" y1="8" x2="232" y2="248" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#33280c"/>
+      <stop offset="1" stop-color="#141006"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="38%" r="48%">
+      <stop stop-color="#f7dc6f" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f7dc6f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" rx="52" fill="url(#bg)"/>
+  <rect width="256" height="256" rx="52" fill="url(#glow)"/>
+  <rect x="12" y="12" width="232" height="232" rx="42" fill="none" stroke="#f7dc6f" stroke-opacity="0.45" stroke-width="3"/>
+  
+  <path d="M58 128c18-28 36-36 58-36h28c16 0 28 8 40 24l8 12H58z" fill="#ffe9a0"/>
+  <rect x="52" y="128" width="156" height="28" rx="8" fill="#f0c84a"/>
+  <circle cx="90" cy="162" r="14" fill="#2a2414" stroke="#f7dc6f" stroke-width="4"/>
+  <circle cx="176" cy="162" r="14" fill="#2a2414" stroke="#f7dc6f" stroke-width="4"/>
+
+  <text x="128" y="226" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="26" font-weight="700" fill="#f7f2ea">H&amp;R</text>
 </svg>
