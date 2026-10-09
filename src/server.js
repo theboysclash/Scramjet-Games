@@ -60,19 +60,40 @@ fastify.setNotFoundHandler((request, reply) => {
   return reply.code(404).type("text/html").sendFile("404.html");
 });
 
-const port = Number(process.env.PORT) || 8080;
+const requestedPort = Number(process.env.PORT) || 8080;
 
-fastify.listen({ port, host: "0.0.0.0" }).then(() => {
-  const address = fastify.server.address();
-  const bound = typeof address === "object" && address ? address.port : port;
-  console.log(`Afterburner listening on http://localhost:${bound}`);
-  console.log(`and http://${hostname()}:${bound}`);
+try {
+  await listenFrom(requestedPort);
+} catch (error) {
+  console.error(error instanceof Error ? error.message : error);
+  process.exit(1);
+}
 
-  const codespace = process.env.CODESPACE_NAME;
-  const domain = process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN;
-  if (codespace && domain) {
-    console.log(
-      `Codespace URL: https://${codespace}-${bound}.${domain}`,
-    );
+async function listenFrom(startPort) {
+  const lastPort = startPort + 20;
+  for (let port = startPort; port <= lastPort; port += 1) {
+    try {
+      await fastify.listen({ port, host: "0.0.0.0" });
+      const address = fastify.server.address();
+      const bound = typeof address === "object" && address ? address.port : port;
+      if (bound !== startPort) {
+        console.log(`Port ${startPort} is already open, so this server is using ${bound}.`);
+      }
+      console.log(`Afterburner listening on http://localhost:${bound}`);
+      console.log(`and http://${hostname()}:${bound}`);
+
+      const codespace = process.env.CODESPACE_NAME;
+      const domain = process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN;
+      if (codespace && domain) {
+        console.log(`Codespace URL: https://${codespace}-${bound}.${domain}`);
+      }
+      return;
+    } catch (error) {
+      const code = error && typeof error === "object" ? error.code : "";
+      if (code === "EADDRINUSE" && port < lastPort && !process.env.PORT) {
+        continue;
+      }
+      throw error;
+    }
   }
-});
+}
