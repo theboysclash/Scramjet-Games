@@ -60,40 +60,48 @@ fastify.setNotFoundHandler((request, reply) => {
   return reply.code(404).type("text/html").sendFile("404.html");
 });
 
-const requestedPort = Number(process.env.PORT) || 8080;
+const port = Number(process.env.PORT) || 8080;
+
+if (await alreadyServing(port)) {
+  console.log(`Afterburner is already running on http://localhost:${port}`);
+  printCodespace(port);
+  process.exit(0);
+}
 
 try {
-  await listenFrom(requestedPort);
+  await fastify.listen({ port, host: "0.0.0.0" });
 } catch (error) {
+  const code = error && typeof error === "object" ? error.code : "";
+  if (code === "EADDRINUSE") {
+    console.error(
+      `Port ${port} is in use, but it is not serving this site. Stop that process, then run pnpm start again.`,
+    );
+    process.exit(1);
+  }
   console.error(error instanceof Error ? error.message : error);
   process.exit(1);
 }
 
-async function listenFrom(startPort) {
-  const lastPort = startPort + 20;
-  for (let port = startPort; port <= lastPort; port += 1) {
-    try {
-      await fastify.listen({ port, host: "0.0.0.0" });
-      const address = fastify.server.address();
-      const bound = typeof address === "object" && address ? address.port : port;
-      if (bound !== startPort) {
-        console.log(`Port ${startPort} is already open, so this server is using ${bound}.`);
-      }
-      console.log(`Afterburner listening on http://localhost:${bound}`);
-      console.log(`and http://${hostname()}:${bound}`);
+console.log(`Afterburner listening on http://localhost:${port}`);
+console.log(`and http://${hostname()}:${port}`);
+printCodespace(port);
 
-      const codespace = process.env.CODESPACE_NAME;
-      const domain = process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN;
-      if (codespace && domain) {
-        console.log(`Codespace URL: https://${codespace}-${bound}.${domain}`);
-      }
-      return;
-    } catch (error) {
-      const code = error && typeof error === "object" ? error.code : "";
-      if (code === "EADDRINUSE" && port < lastPort && !process.env.PORT) {
-        continue;
-      }
-      throw error;
-    }
+function printCodespace(bound) {
+  const codespace = process.env.CODESPACE_NAME;
+  const domain = process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN;
+  if (codespace && domain) {
+    console.log(`Codespace URL: https://${codespace}-${bound}.${domain}`);
+  }
+}
+
+async function alreadyServing(bound) {
+  try {
+    const response = await fetch(`http://127.0.0.1:${bound}/`, {
+      signal: AbortSignal.timeout(1500),
+    });
+    const text = await response.text();
+    return response.ok && text.includes("<title>Games</title>");
+  } catch {
+    return false;
   }
 }

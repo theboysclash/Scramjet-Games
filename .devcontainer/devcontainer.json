@@ -1,19 +1,13 @@
 {
   "name": "Afterburner",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
-  "postCreateCommand": "corepack enable && corepack prepare pnpm@10.18.3 --activate && pnpm install --frozen-lockfile",
+  "postCreateCommand": "corepack enable && corepack prepare pnpm@10.18.3 --activate && pnpm install --frozen-lockfile && bash .devcontainer/start.sh",
+  "postStartCommand": "bash .devcontainer/start.sh",
   "portsAttributes": {
     "8080": {
       "label": "Afterburner",
-      "onAutoForward": "notify",
-      "protocol": "https"
-    }
-  },
-  "customizations": {
-    "vscode": {
-      "settings": {
-        "task.allowAutomaticTasks": "on"
-      }
+      "onAutoForward": "openBrowser",
+      "protocol": "http"
     }
   }
 }
