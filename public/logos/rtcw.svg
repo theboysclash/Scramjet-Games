@@ -1,5 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <rect width="256" height="256" rx="48" fill="#16120f"/>
-  <rect x="16" y="16" width="224" height="224" rx="40" fill="none" stroke="#8e5a3c" stroke-width="10"/>
-  <text x="128" y="154" text-anchor="middle" font-family="Georgia, serif" font-size="64" font-weight="700" fill="#8e5a3c">RTCW</text>
+  <defs>
+    <linearGradient id="bg" x1="24" y1="8" x2="232" y2="248" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2c1c14"/>
+      <stop offset="1" stop-color="#120e0c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="38%" r="48%">
+      <stop stop-color="#d7a07a" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#d7a07a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" rx="52" fill="url(#bg)"/>
+  <rect width="256" height="256" rx="52" fill="url(#glow)"/>
+  <rect x="12" y="12" width="232" height="232" rx="42" fill="none" stroke="#d7a07a" stroke-opacity="0.45" stroke-width="3"/>
+  
+  <path d="M70 164V96h22v22h18V78h22v40h18V96h22v68z" fill="#f0d2ba"/>
+  <rect x="116" y="132" width="24" height="32" fill="#6b3e2e"/>
+
+  <text x="128" y="226" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="26" font-weight="700" fill="#f7f2ea">RTCW</text>
 </svg>

@@ -1,5 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <rect width="256" height="256" rx="48" fill="#16120f"/>
-  <rect x="16" y="16" width="224" height="224" rx="40" fill="none" stroke="#ff7a3c" stroke-width="10"/>
-  <text x="128" y="154" text-anchor="middle" font-family="Georgia, serif" font-size="64" font-weight="700" fill="#ff7a3c">BO2</text>
+  <defs>
+    <linearGradient id="bg" x1="24" y1="8" x2="232" y2="248" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2c1810"/>
+      <stop offset="1" stop-color="#120c0a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="38%" r="48%">
+      <stop stop-color="#ff7a3c" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ff7a3c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" rx="52" fill="url(#bg)"/>
+  <rect width="256" height="256" rx="52" fill="url(#glow)"/>
+  <rect x="12" y="12" width="232" height="232" rx="42" fill="none" stroke="#ff7a3c" stroke-opacity="0.45" stroke-width="3"/>
+  
+  <path d="M78 150 L128 58 L178 150" fill="none" stroke="#ffb088" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M98 150 L128 96 L158 150" fill="none" stroke="#ff7a3c" stroke-width="10" stroke-linejoin="round"/>
+
+  <text x="128" y="226" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="26" font-weight="700" fill="#f7f2ea">BO2</text>
 </svg>

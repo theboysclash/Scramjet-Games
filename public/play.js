@@ -13,6 +13,9 @@ const form = document.getElementById("sj-form");
 const address = document.getElementById("sj-address");
 const status = document.getElementById("sj-status");
 const host = document.getElementById("frame-host");
+const stage = document.querySelector(".stage");
+const fullscreenButton = document.getElementById("fullscreen");
+const exitFullscreenButton = document.getElementById("exit-fullscreen");
 let frame = null;
 
 const ready = (async () => {
@@ -62,3 +65,20 @@ form.addEventListener("submit", (event) => {
 
 const initial = toUrl(new URLSearchParams(location.search).get("url") || "");
 if (initial) openInScramjet(initial);
+
+async function toggleFullscreen() {
+  if (document.fullscreenElement) {
+    await document.exitFullscreen();
+    return;
+  }
+  await stage.requestFullscreen();
+}
+
+fullscreenButton.addEventListener("click", () => {
+  toggleFullscreen().catch((error) => {
+    status.textContent = error instanceof Error ? error.message : String(error);
+  });
+});
+exitFullscreenButton.addEventListener("click", () => {
+  document.exitFullscreen().catch(() => {});
+});

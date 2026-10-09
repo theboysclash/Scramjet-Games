@@ -15,8 +15,12 @@
         <input id="sj-address" type="text" placeholder="Game link" autocomplete="off" />
         <button type="submit">Open</button>
       </form>
+      <button id="fullscreen" type="button">Full screen</button>
     </header>
-    <div id="frame-host"></div>
+    <div class="stage">
+      <div id="frame-host"></div>
+      <button id="exit-fullscreen" type="button">Exit full screen</button>
+    </div>
     <p id="sj-status"></p>
     <script src="/baremux/index.js"></script>
     <script src="/scram/scramjet.all.js"></script>
