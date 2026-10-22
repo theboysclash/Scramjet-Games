@@ -3,120 +3,148 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Your next game is right here. Explore the Afterburner library and launch your favorite browser games." />
     <title>Games</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/menu.css" />
+    <script src="/menu.js" defer></script>
   </head>
-  <body>
-    <main>
-      <h1>Games</h1>
-      <form action="/play.html" method="get">
-        <label for="url">Scramjet</label>
-        <input id="url" name="url" type="text" placeholder="Game link" autocomplete="off" />
-        <button type="submit">Open</button>
-      </form>
-      <div class="games">
-        <a class="game" href="/play.html?url=https%3A%2F%2Fvel.gg%2Fbo1z">
-          <img src="/logos/bo1-zombies.svg" alt="" width="96" height="96" />
-          <span>BO1 Zombies</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fmoon-zombies.pages.dev">
-          <img src="/logos/moon.svg" alt="" width="96" height="96" />
-          <span>Moon</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fkino-der-toten.pages.dev">
-          <img src="/logos/kino.svg" alt="" width="96" height="96" />
-          <span>Kino der Toten</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fcheese-cube.pages.dev">
-          <img src="/logos/cheese-cube.svg" alt="" width="96" height="96" />
-          <span>BO3 Cheese Cube</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fvibeslops.luckeysystems.com">
-          <img src="/logos/bo2.svg" alt="" width="96" height="96" />
-          <span>Black Ops 2</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fovz-game-production.up.railway.app">
-          <img src="/logos/mw2.svg" alt="" width="96" height="96" />
-          <span>Modern Warfare 2</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fskate.aaddpp.lol">
-          <img src="/logos/skate-3.svg" alt="" width="96" height="96" />
-          <span>Skate 3</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fglobal-terror.net">
-          <img src="/logos/skate-rust.svg" alt="" width="96" height="96" />
-          <span>Skate Rust</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fsurfd.net">
-          <img src="/logos/cs-surf.svg" alt="" width="96" height="96" />
-          <span>CS Surf</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fmitchellhynes.com%2Fhalo">
-          <img src="/logos/halo-ce.svg" alt="" width="96" height="96" />
-          <span>Halo CE</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fhcemobile.com">
-          <img src="/logos/halo-mobile.svg" alt="" width="96" height="96" />
-          <span>Halo CE Mobile</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fpes6.optijuegos.net">
-          <img src="/logos/pes-6.svg" alt="" width="96" height="96" />
-          <span>PES 6</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20261006055917%2Fhttps%3A%2F%2Fplaygta5.com%2F">
-          <img src="/logos/gta-5.svg" alt="" width="96" height="96" />
-          <span>GTA 5</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fjoncodeofficial.github.io%2Fgta-vice-city-wasm%2F">
-          <img src="/logos/vice-city.svg" alt="" width="96" height="96" />
-          <span>GTA Vice City</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fshar-wasm.cjoseph.workers.dev%2F%3Fskipmovie">
-          <img src="/logos/hit-and-run.svg" alt="" width="96" height="96" />
-          <span>The Simpsons: Hit & Run</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fq1.pieter.com">
-          <img src="/logos/quake-1.svg" alt="" width="96" height="96" />
-          <span>Quake 1</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fq2.pieter.com">
-          <img src="/logos/quake-2.svg" alt="" width="96" height="96" />
-          <span>Quake 2</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fq3.pieter.com">
-          <img src="/logos/quake-3.svg" alt="" width="96" height="96" />
-          <span>Quake 3</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Frtcw.pieter.com">
-          <img src="/logos/rtcw.svg" alt="" width="96" height="96" />
-          <span>Return to Castle Wolfenstein</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fut.pieter.com">
-          <img src="/logos/ut.svg" alt="" width="96" height="96" />
-          <span>Unreal Tournament</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fpixelsuft.github.io%2Fhl%2F">
-          <img src="/logos/half-life.svg" alt="" width="96" height="96" />
-          <span>Half-Life</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fx8bitrain.github.io%2FwebXash%2F">
-          <img src="/logos/webxash.svg" alt="" width="96" height="96" />
-          <span>Half-Life / CS 1.6</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fjohnimril.github.io%2Fdiablo_web%2F">
-          <img src="/logos/diablo.svg" alt="" width="96" height="96" />
-          <span>Diablo</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fwebwars.link">
-          <img src="/logos/hedgewars.svg" alt="" width="96" height="96" />
-          <span>Hedgewars</span>
-        </a>
-        <a class="game" href="/play.html?url=https%3A%2F%2Fwasmarcade.com%2FFan">
-          <img src="/logos/wasm-arcade.svg" alt="" width="96" height="96" />
-          <span>More GTA / Minecraft</span>
-        </a>
+  <body id="top">
+    <a class="skip-link" href="#library">Skip to games</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Afterburner home"><img src="/favicon.svg" alt="" width="34" height="34" />AFTERBURNER</a>
+        <nav aria-label="Main navigation"><a class="nav-link" href="#library">Game library <span aria-hidden="true">↗</span></a><a class="nav-link" href="#open-link">Open a link <span aria-hidden="true">↗</span></a></nav>
+        <span class="header-note"><span class="status-dot"></span> YOUR NEXT SESSION STARTS HERE</span>
       </div>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="tiny-cross" aria-hidden="true">+</span> THE BROWSER IS YOUR PLAYGROUND</p>
+          <h1 id="hero-title">Less scrolling.<br />More <span>playing.</span></h1>
+          <p class="hero-description">Old favorites. New obsessions. All in one place.<br class="desktop-break" /> Pick a game and get into it.</p>
+          <a class="primary-button" href="#library">Explore the library <span aria-hidden="true">↘</span></a>
+          <p class="hero-caption">25 games. A whole lot of possibilities.</p>
+        </div>
+        <a class="featured" href="/play.html?url=https%3A%2F%2Fvel.gg%2Fbo1z" aria-label="Play featured game: BO1 Zombies">
+          <div class="featured-top"><span class="featured-tag"><span aria-hidden="true">✦</span> IN THE SPOTLIGHT</span><span class="featured-index">01 / 25</span></div>
+          <div class="featured-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="art-word">SURVIVE.</span><img src="/logos/bo1-zombies.svg" alt="" width="220" height="220" /><span class="art-cross cross-one">+</span><span class="art-cross cross-two">+</span></div>
+          <div class="featured-bottom"><div><span class="eyebrow">THE UNDEAD ARE WAITING</span><h2>BO1 Zombies</h2><p>One more round. You know the drill.</p></div><span class="featured-launch" aria-hidden="true">↗</span></div>
+        </a>
+      </section>
+      <section class="link-launcher" id="open-link" aria-labelledby="link-title">
+        <div class="launcher-copy"><span class="link-icon" aria-hidden="true">↗</span><div><h2 id="link-title">Got somewhere else in mind?</h2><p>Paste a game link and open it with Scramjet.</p></div></div>
+        <form action="/play.html" method="get"><label class="sr" for="url">Game link</label><input id="url" name="url" type="text" placeholder="https://your-next-game.com" autocomplete="off" required /><button type="submit">Let’s go <span aria-hidden="true">↗</span></button></form>
+      </section>
+      <section class="library" id="library" aria-labelledby="library-title">
+        <div class="library-heading"><div><p class="eyebrow">FIND YOUR NEXT FAVORITE</p><h2 id="library-title">The library<span class="library-total">25</span></h2></div><div class="search-wrap" hidden><label class="sr" for="game-search">Search games</label><svg aria-hidden="true" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="game-search" type="search" placeholder="Search for a game…" autocomplete="off" /></div></div>
+        <div class="library-toolbar" hidden><div class="filters" role="group" aria-label="Filter games by category"><button type="button" data-filter="all" aria-pressed="true">All games</button><button type="button" data-filter="Shooter" aria-pressed="false">Shooters</button><button type="button" data-filter="Action & adventure" aria-pressed="false">Action & adventure</button><button type="button" data-filter="Sports" aria-pressed="false">Sports</button><button type="button" data-filter="Strategy" aria-pressed="false">Strategy</button></div><p id="results-count" role="status" aria-live="polite">Showing all 25 games</p></div>
+        <div class="games">
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Fvel.gg%2Fbo1z" style="--game-accent: #ff7448">
+            <div class="game-art"><span class="game-number" aria-hidden="true">01</span><img src="/logos/bo1-zombies.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>BO1 Zombies</h3></div>
+          </a>
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Fmoon-zombies.pages.dev" style="--game-accent: #bda4ff">
+            <div class="game-art"><span class="game-number" aria-hidden="true">02</span><img src="/logos/moon.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>Moon</h3></div>
+          </a>
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Fkino-der-toten.pages.dev" style="--game-accent: #ff6868">
+            <div class="game-art"><span class="game-number" aria-hidden="true">03</span><img src="/logos/kino.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>Kino der Toten</h3></div>
+          </a>
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Fcheese-cube.pages.dev" style="--game-accent: #f9ce65">
+            <div class="game-art"><span class="game-number" aria-hidden="true">04</span><img src="/logos/cheese-cube.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>BO3 Cheese Cube</h3></div>
+          </a>
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Fvibeslops.luckeysystems.com" style="--game-accent: #ffae52">
+            <div class="game-art"><span class="game-number" aria-hidden="true">05</span><img src="/logos/bo2.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>Black Ops 2</h3></div>
+          </a>
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Fovz-game-production.up.railway.app" style="--game-accent: #90b9a1">
+            <div class="game-art"><span class="game-number" aria-hidden="true">06</span><img src="/logos/mw2.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>Modern Warfare 2</h3></div>
+          </a>
+          <a class="game" data-category="Sports" href="/play.html?url=https%3A%2F%2Fskate.aaddpp.lol" style="--game-accent: #96c6e4">
+            <div class="game-art"><span class="game-number" aria-hidden="true">07</span><img src="/logos/skate-3.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Sports</span><h3>Skate 3</h3></div>
+          </a>
+          <a class="game" data-category="Sports" href="/play.html?url=https%3A%2F%2Fglobal-terror.net" style="--game-accent: #c59d78">
+            <div class="game-art"><span class="game-number" aria-hidden="true">08</span><img src="/logos/skate-rust.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Sports</span><h3>Skate Rust</h3></div>
+          </a>
+          <a class="game" data-category="Sports" href="/play.html?url=https%3A%2F%2Fsurfd.net" style="--game-accent: #66d9c0">
+            <div class="game-art"><span class="game-number" aria-hidden="true">09</span><img src="/logos/cs-surf.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Sports</span><h3>CS Surf</h3></div>
+          </a>
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Fmitchellhynes.com%2Fhalo" style="--game-accent: #9cce7b">
+            <div class="game-art"><span class="game-number" aria-hidden="true">10</span><img src="/logos/halo-ce.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>Halo CE</h3></div>
+          </a>
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Fhcemobile.com" style="--game-accent: #9bbde6">
+            <div class="game-art"><span class="game-number" aria-hidden="true">11</span><img src="/logos/halo-mobile.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>Halo CE Mobile</h3></div>
+          </a>
+          <a class="game" data-category="Sports" href="/play.html?url=https%3A%2F%2Fpes6.optijuegos.net" style="--game-accent: #99d48c">
+            <div class="game-art"><span class="game-number" aria-hidden="true">12</span><img src="/logos/pes-6.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Sports</span><h3>PES 6</h3></div>
+          </a>
+          <a class="game" data-category="Action & adventure" href="/play.html?url=https%3A%2F%2Fweb.archive.org%2Fweb%2F20261006055917%2Fhttps%3A%2F%2Fplaygta5.com%2F" style="--game-accent: #b5d57d">
+            <div class="game-art"><span class="game-number" aria-hidden="true">13</span><img src="/logos/gta-5.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Action & adventure</span><h3>GTA 5</h3></div>
+          </a>
+          <a class="game" data-category="Action & adventure" href="/play.html?url=https%3A%2F%2Fjoncodeofficial.github.io%2Fgta-vice-city-wasm%2F" style="--game-accent: #ed8ac1">
+            <div class="game-art"><span class="game-number" aria-hidden="true">14</span><img src="/logos/vice-city.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Action & adventure</span><h3>GTA Vice City</h3></div>
+          </a>
+          <a class="game" data-category="Action & adventure" href="/play.html?url=https%3A%2F%2Fshar-wasm.cjoseph.workers.dev%2F%3Fskipmovie" style="--game-accent: #e8cd6b">
+            <div class="game-art"><span class="game-number" aria-hidden="true">15</span><img src="/logos/hit-and-run.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Action & adventure</span><h3>The Simpsons: Hit & Run</h3></div>
+          </a>
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Fq1.pieter.com" style="--game-accent: #ce8e5b">
+            <div class="game-art"><span class="game-number" aria-hidden="true">16</span><img src="/logos/quake-1.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>Quake 1</h3></div>
+          </a>
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Fq2.pieter.com" style="--game-accent: #e7ac63">
+            <div class="game-art"><span class="game-number" aria-hidden="true">17</span><img src="/logos/quake-2.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>Quake 2</h3></div>
+          </a>
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Fq3.pieter.com" style="--game-accent: #f6756b">
+            <div class="game-art"><span class="game-number" aria-hidden="true">18</span><img src="/logos/quake-3.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>Quake 3</h3></div>
+          </a>
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Frtcw.pieter.com" style="--game-accent: #cf9b78">
+            <div class="game-art"><span class="game-number" aria-hidden="true">19</span><img src="/logos/rtcw.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>Return to Castle Wolfenstein</h3></div>
+          </a>
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Fut.pieter.com" style="--game-accent: #87b8e3">
+            <div class="game-art"><span class="game-number" aria-hidden="true">20</span><img src="/logos/ut.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>Unreal Tournament</h3></div>
+          </a>
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Fpixelsuft.github.io%2Fhl%2F" style="--game-accent: #f9a35f">
+            <div class="game-art"><span class="game-number" aria-hidden="true">21</span><img src="/logos/half-life.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>Half-Life</h3></div>
+          </a>
+          <a class="game" data-category="Shooter" href="/play.html?url=https%3A%2F%2Fx8bitrain.github.io%2FwebXash%2F" style="--game-accent: #e59b68">
+            <div class="game-art"><span class="game-number" aria-hidden="true">22</span><img src="/logos/webxash.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Shooter</span><h3>Half-Life / CS 1.6</h3></div>
+          </a>
+          <a class="game" data-category="Action & adventure" href="/play.html?url=https%3A%2F%2Fjohnimril.github.io%2Fdiablo_web%2F" style="--game-accent: #e58178">
+            <div class="game-art"><span class="game-number" aria-hidden="true">23</span><img src="/logos/diablo.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Action & adventure</span><h3>Diablo</h3></div>
+          </a>
+          <a class="game" data-category="Strategy" href="/play.html?url=https%3A%2F%2Fwebwars.link" style="--game-accent: #a8cc78">
+            <div class="game-art"><span class="game-number" aria-hidden="true">24</span><img src="/logos/hedgewars.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Strategy</span><h3>Hedgewars</h3></div>
+          </a>
+          <a class="game" data-category="Action & adventure" href="/play.html?url=https%3A%2F%2Fwasmarcade.com%2FFan" style="--game-accent: #b2a2ef">
+            <div class="game-art"><span class="game-number" aria-hidden="true">25</span><img src="/logos/wasm-arcade.svg" alt="" width="120" height="120" loading="lazy" /><span class="card-play" aria-hidden="true">↗</span></div>
+            <div class="game-info"><span class="game-category">Action & adventure</span><h3>More GTA / Minecraft</h3></div>
+          </a>
+        </div>
+        <div class="empty-state" hidden><span aria-hidden="true">⌕</span><h3>No games found</h3><p>Try another name or explore a different category.</p><button type="button" id="reset-filters">Show all games <span aria-hidden="true">↗</span></button></div>
+      </section>
     </main>
+    <footer class="site-footer"><a class="footer-brand" href="/">AFTERBURNER<span aria-hidden="true">↗</span></a><p>A little less ordinary. A little more play.</p><a href="#top" aria-label="Back to top">BACK TO TOP ↑</a></footer>
   </body>
 </html>
